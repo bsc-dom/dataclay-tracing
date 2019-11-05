@@ -1,6 +1,6 @@
 # extrae-java
 Maven repository for Extrae java dependencies
-To include it as a dependency in a maven project, add the following repository and dependency to the `pom.xml`:
+To include extrae and its aspects as a dependency in a maven project, add the following repository and dependencies to the `pom.xml`:
 
 ```xml
 <repository>
@@ -14,5 +14,10 @@ To include it as a dependency in a maven project, add the following repository a
     <groupId>es.bsc.dataclay</groupId>
     <artifactId>extrae</artifactId>
     <version>3.6.1</version>
+</dependency>
+<dependency>
+    <groupId>es.bsc.dataclay</groupId>
+    <artifactId>extrae-aspects</artifactId>
+    <version>2.0.8-RC1</version>
 </dependency>
 ```
