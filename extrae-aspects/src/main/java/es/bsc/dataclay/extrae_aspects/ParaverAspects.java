@@ -53,6 +53,7 @@ public class ParaverAspects {
 					
 	@Before("extraePointcut()")
 	public void emitExtraeEventBefore(JoinPoint thisJoinPoint) {
+		System.out.println("HEEEEEEEEEEEEEEELLLLLLLLLLLLLLLLLLLLLOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO");
 		Paraver.emitEvent(true,
 				thisJoinPoint.getSignature().getDeclaringTypeName() + "." + thisJoinPoint.getSignature().getName());
 	}
