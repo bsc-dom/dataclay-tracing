@@ -64,7 +64,7 @@ public class ParaverAspects {
 				thisJoinPoint.getSignature().getDeclaringTypeName() + "." + thisJoinPoint.getSignature().getName());
 	}
 
-    @AfterThrowing(value = "execution(* *(..))", throwing = "e")
+    @AfterThrowing(value = "execution(* es.bsc.dataclay..*(..))", throwing = "e")
     public void emitExtraeException(JoinPoint thisJoinPoint, Throwable e) {
 		Paraver.emitEvent(true, e.toString());
 		Paraver.emitEvent(false, e.toString());
