@@ -1,4 +1,4 @@
-package es.bsc.dataclay.paraver.aspects;
+package es.bsc.dataclay.extrae_aspects;
 
 import es.bsc.dataclay.paraver.Paraver;
 import es.bsc.dataclay.paraver.ParaverEventType;
