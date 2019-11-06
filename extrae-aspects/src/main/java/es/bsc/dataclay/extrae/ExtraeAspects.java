@@ -1,4 +1,4 @@
-package es.bsc.dataclay.extrae_aspects;
+package es.bsc.dataclay.extrae;
 
 import es.bsc.dataclay.paraver.Paraver;
 import es.bsc.dataclay.paraver.ParaverEventType;
@@ -13,7 +13,7 @@ import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
 
 @Aspect
-public class ParaverAspects {
+public class ExtraeAspects {
 	
 	private static final String EXTRAE_POINTCUT = "(execution(* es.bsc.dataclay.commonruntime.ClientRuntime.*(..)) "
 			+ "|| execution(* es.bsc.dataclay.commonruntime.DataClayRuntime.*(..)) "
@@ -63,8 +63,7 @@ public class ParaverAspects {
 				thisJoinPoint.getSignature().getDeclaringTypeName() + "." + thisJoinPoint.getSignature().getName());
 	}
 
-	
-    @AfterThrowing(value = "execution(* es.bsc.dataclay..*(..))", throwing = "e")
+    @AfterThrowing(value = EXTRAE_POINTCUT, throwing = "e")
     public void emitExtraeException(JoinPoint thisJoinPoint, Throwable e) {
 		Paraver.emitEvent(true, e.toString());
 		Paraver.emitEvent(false, e.toString());

@@ -1,0 +1,5 @@
+<aspectj>
+    <aspects>
+        <aspect name="es.bsc.dataclay.extrae.ExtraeAspects"/>
+    </aspects>
+</aspectj>
